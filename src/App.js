@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { createStore } from 'redux';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -24,3 +27,7 @@ function App() {
 }
 
 export default App;
+
+const hello = () => ({ welcome: 'hello' });
+const store = createStore(hello);
+console.log(store.getState());
